@@ -1,0 +1,127 @@
+:root {
+  --fond: #f4f6fb;
+  --carte: #ffffff;
+  --texte: #1f2937;
+  --texte-doux: #6b7280;
+  --accent: #3b5bdb;
+  --accent-fonce: #2f49b0;
+  --bordure: #e5e7eb;
+  --vert: #2f9e44;
+  --vert-clair: #ebfbee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+  display: flex;
+  flex-direction: column;
+}
+
+.entete {
+  padding: 48px 24px 32px;
+  text-align: center;
+  background: linear-gradient(135deg, #3b5bdb, #5f3dc4);
+  color: #ffffff;
+}
+
+.entete h1 {
+  margin: 0 0 8px;
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+}
+
+.sous-titre {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.conteneur {
+  width: min(760px, 100% - 32px);
+  margin: -24px auto 48px;
+  padding: 24px;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(30, 41, 59, 0.12);
+}
+
+.barre-outils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.compteur {
+  margin-left: auto;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: #edf2ff;
+  border-radius: 999px;
+}
+
+.liste-taches {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.tache {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fbfcfe;
+  border: 1px solid var(--bordure);
+  border-radius: 10px;
+}
+
+.tache-titre {
+  font-weight: 500;
+}
+
+.tache.terminee .tache-titre {
+  color: var(--texte-doux);
+  text-decoration: line-through;
+}
+
+.bouton-statut {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-fonce);
+  background: #edf2ff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tache.terminee .bouton-statut {
+  color: var(--vert);
+  background: var(--vert-clair);
+}
+
+.bouton-statut:hover {
+  filter: brightness(0.95);
+}
+
+.pied {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--texte-doux);
+}
