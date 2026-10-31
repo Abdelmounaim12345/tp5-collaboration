@@ -17,6 +17,11 @@ function filtreRecherche(tache) {
 // (espace réservé pour la fonctionnalité de filtre)
 
 function filtreStatut(tache) {
+  const select = document.getElementById("filtre-statut");
+  const valeur = select ? select.value : "toutes";
+
+  if (valeur === "a-faire") return tache.statut === "a-faire";
+  if (valeur === "terminees") return tache.statut === "terminee";
   return true;
 }
 
