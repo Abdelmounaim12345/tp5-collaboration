@@ -9,7 +9,9 @@ const taches = [
 
 // Filtres : chaque fonctionnalité remplace le corps de sa fonction
 function filtreRecherche(tache) {
-  return true;
+  const champ = document.getElementById("recherche");
+  const texte = champ ? champ.value.trim().toLowerCase() : "";
+  return tache.titre.toLowerCase().includes(texte);
 }
 
 // (espace réservé pour la fonctionnalité de filtre)
