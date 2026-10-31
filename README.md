@@ -19,6 +19,4 @@ Projet réalisé en binôme dans le cadre du TP5 « Travail collaboratif avec Gi
 - `dev` : branche d'intégration.
 - `feature/...` : une branche par fonctionnalité.
 
-## Lancer le projet
 
-Ouvrir simplement `index.html` dans un navigateur.
