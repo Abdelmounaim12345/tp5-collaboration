@@ -8,14 +8,24 @@
 </head>
 <body>
   <header class="entete">
-    <h1 id="titre">TaskFlow</h1>
+    <h1 id="titre">TaskFlow — Gestion de mes tâches</h1>
     <p class="sous-titre">Un gestionnaire de tâches simple, versionné avec Git.</p>
   </header>
 
   <main class="conteneur">
     <section class="barre-outils">
-      <!-- zone-recherche -->
-      <!-- zone-filtre -->
+      <input
+        id="recherche"
+        class="champ-recherche"
+        type="search"
+        placeholder="Rechercher une tâche…"
+        aria-label="Rechercher une tâche"
+      />
+      <select id="filtre-statut" class="champ-filtre" aria-label="Filtrer par statut">
+        <option value="toutes">Toutes les tâches</option>
+        <option value="a-faire">À faire</option>
+        <option value="terminees">Terminées</option>
+      </select>
       <span id="compteur" class="compteur">0 tâche</span>
     </section>
 

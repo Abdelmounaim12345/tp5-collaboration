@@ -9,12 +9,19 @@ const taches = [
 
 // Filtres : chaque fonctionnalité remplace le corps de sa fonction
 function filtreRecherche(tache) {
-  return true;
+  const champ = document.getElementById("recherche");
+  const texte = champ ? champ.value.trim().toLowerCase() : "";
+  return tache.titre.toLowerCase().includes(texte);
 }
 
 // (espace réservé pour la fonctionnalité de filtre)
 
 function filtreStatut(tache) {
+  const select = document.getElementById("filtre-statut");
+  const valeur = select ? select.value : "toutes";
+
+  if (valeur === "a-faire") return tache.statut === "a-faire";
+  if (valeur === "terminees") return tache.statut === "terminee";
   return true;
 }
 
